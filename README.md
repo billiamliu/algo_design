@@ -1,10 +1,18 @@
 # Reading References
 **Book**: The Algorithm Design Manual - Steven S. Skiena
 
+## Writing LaTeX & Math Equations
+- use an [online LaTeX editor](http://www.sciweavers.org/free-online-latex-equation-editor) to generate the `.png`
+- `curl -o assets/foo.png https://123.png`
+- Markdown `![LaTeX Equation][ref_name]`
+- Markdown Ref `[ref_name]: assets/foo.png "image mouseover caption"`
+
 ## Introduction
 
 ### Big O Dominance Order
-n! >> c^n >> n^3 >> n^2 >> n^(1 + ε) >> nlogn >> n >> n^-1 >> log^(2)n >> logn >> logn / loglogn >> loglogn >> α(n) Ackerman >> 1
+α: Ackerman's Function
+
+![Dominance Chain][dom_chain]
 
 ### Data Structures
 - Arrays
@@ -19,6 +27,9 @@ n! >> c^n >> n^3 >> n^2 >> n^(1 + ε) >> nlogn >> n >> n^-1 >> log^(2)n >> logn 
 - Graph (adjacency matrices/lists)
 - Set
 
+### Efficiency Reference
+_* denotes a C pointer_
+
 Dictionary Operation | Unsorted Array | Sorted Array
 --- | --- | ---
 Search(L, k) | O(n) | O(logn)
@@ -29,7 +40,7 @@ Predecessor(L, * x) | O(n) | O(1)
 Min(L) | O(n) | O(1)
 Max(L) | O(n) | O(1)
 
-$ Deletion can be quickened by filling in the hole with A[n] and decrement n.
+_$ Deletion can be quickened by filling in the hole with A[n] and decrement n_
 
 Dictionary Operation | Singly Unsorted | Double Unsorted | Singly Sorted | Double Sorted
 --- | --- | --- | --- | ---
@@ -54,8 +65,8 @@ DeleteMin(Q) | O(n) | O(1) | O(logn)
 - α: size of the alphabet
 - S: string
 - m: size of hash table, ideally a large prime not too close to 2^i - 1
-- ![H(S) = \sum_{i=0}^{|S|-1}  \alpha^{|S|-(i+1)} \times char(s_i)][str_hash]
-- H(S) = Σ(i=0, |S|-1) α^(|S|-(i+1)) x char(si)
+- ![String Hash Equation][str_hash]
 - key: H(S) % m
 
-[str_hash]: assets/str_hash.png "String Hash Equation"
+[str_hash]: assets/str_hash.png "H(S) = \sum_{i=0}^{|S|-1}  \alpha^{|S|-(i+1)} \times char(s_i)"
+[dom_chain]: assets/dom_chain.png "n! \gg c^n \gg n^3 \gg n^2 \gg n^{1+ \epsilon} \gg n \log n \gg n \gg n^{-1} \gg \log^2 n \gg \log n \gg \frac{\log n}{\log\log n} \gg \log\log n \gg \alpha(n) \gg 1"
