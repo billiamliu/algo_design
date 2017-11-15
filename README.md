@@ -28,6 +28,7 @@ Successor(L, * x) | O(n) | O(1)
 Predecessor(L, * x) | O(n) | O(1)
 Min(L) | O(n) | O(1)
 Max(L) | O(n) | O(1)
+
 $ Deletion can be quickened by filling in the hole with A[n] and decrement n.
 
 Dictionary Operation | Singly Unsorted | Double Unsorted | Singly Sorted | Double Sorted
