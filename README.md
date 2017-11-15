@@ -54,8 +54,8 @@ DeleteMin(Q) | O(n) | O(1) | O(logn)
 - α: size of the alphabet
 - S: string
 - m: size of hash table, ideally a large prime not too close to 2^i - 1
+- ![H(S) = \sum_{i=0}^{|S|-1}  \alpha^{|S|-(i+1)} \times char(s_i)][str_hash]
 - H(S) = Σ(i=0, |S|-1) α^(|S|-(i+1)) x char(si)
 - key: H(S) % m
 
-test
-$$\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$$
+[str_hash]: assets/str_hash.png "String Hash Equation"
