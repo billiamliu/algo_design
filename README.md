@@ -27,6 +27,11 @@
 - Graph (adjacency matrices/lists)
 - Set
 
+### Logarithm
+- lg: log_2
+- ln: log_e
+- log: log_10
+
 ### Efficiency Reference
 _* denotes a C pointer_
 
@@ -60,13 +65,38 @@ DeleteMin(Q) | O(n) | O(1) | O(logn)
 
 ### Sample String Hash
 
-
-
+Simple pattern searching of string _S_ with pattern _p_, naïve looping gives **O(mn)** where _m=|p| n=|S|_. With hashing the expected case
+can be reduced down to **O(m+n)**.
 - α: size of the alphabet
 - S: string
 - m: size of hash table, ideally a large prime not too close to 2^i - 1
 - ![String Hash Equation][str_hash]
 - key: H(S) % m
+The key is that finding the next window of _m_ characters can be calculated using:
+![String Hash j plus one][str_hash_plus_one]
 
+
+### Binary Heap
+
+Maintains a partial order on the set of elements which is weaker than the sorted order (efficient to maintain), yet stronger than random order(easier to find min).
+
+**Max Heap** the parent has a key _>=_ than its children.
+
+**Min Heap** the parent has a key _<=_ than its children.
+
+Insertion takes at most O(logn) as the height is ![lg n][lg_n], thus creation of a heap takes at most ![n lg n][n_lg_n].
+
+Heap construction time can be increased to linear by using _bubble down_ insertion, as only _n/2_ leafs travel all of ![lg n][lg_n], _n/4_ at height _1_, _n/8_ at height _2_ and so on. The cost becomes:
+
+![Heap Bubble Down][heap_bubble_d]
+
+**A Heap is not a Binary Tree**
+
+[//]: # (Below are Markdown References)
+
+[lg_n]: assets/lg_n.png "\log_2 n"
+[n_lg_n]: assets/n_lg_n.png "n \log_2 n"
 [str_hash]: assets/str_hash.png "H(S) = \sum_{i=0}^{|S|-1}  \alpha^{|S|-(i+1)} \times char(s_i)"
+[str_hash_plus_one]: assets/str_hash_plus_one.png "H(S, j+1) = \alpha(H(S, j) - \alpha^{m-1}char(s_j)) + char(s_{j+m})"
 [dom_chain]: assets/dom_chain.png "n! \gg c^n \gg n^3 \gg n^2 \gg n^{1+ \epsilon} \gg n \log n \gg n \gg n^{-1} \gg \log^2 n \gg \log n \gg \frac{\log n}{\log\log n} \gg \log\log n \gg \alpha(n) \gg 1"
+[heap_bubble_d]: assets/heap_bubble_d.png " \sum_{h=0}^{\lfloor \lg n \rfloor} \lceil n/2^{h+1}\rceil h \leq n \sum_{h=0}^{\lfloor\lg n\rfloor} h/2^h \leq 2n"
