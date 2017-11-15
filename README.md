@@ -46,3 +46,16 @@ Find Min | Unsorted Array | Sorted Array | Balanced Tree
 Insert(Q, * x) | O(1) | O(n) | O(logn)
 FindMin(Q) | O(1) | O(1) | O(1)
 DeleteMin(Q) | O(n) | O(1) | O(logn)
+
+### Sample String Hash
+
+
+
+- α: size of the alphabet
+- S: string
+- m: size of hash table, ideally a large prime not too close to 2^i - 1
+- H(S) = Σ(i=0, |S|-1) α^(|S|-(i+1)) x char(si)
+- key: H(S) % m
+
+test
+$$\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i$$
