@@ -94,9 +94,9 @@ Heap construction time can be increased to linear by using _bubble down_ inserti
 **A Heap is not a Binary Tree**
 
 ### Sort
-- Heap Sort
-- Merge Sort
-- Quick Sort
+- Heap Sort ![n log n][n_lg_n]
+- Merge Sort ![n log n][n_lg_n]
+- Quick Sort (worst case n^2, _random_ case ![n log n][n_lg_n] with high probability)
 
 [//]: # (Below are Markdown References)
 
