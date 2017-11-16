@@ -23,6 +23,7 @@
 - Binary Search Tree
 - Balanced Search Tree
 - Priority Queue
+- Heap
 - String
 - Graph (adjacency matrices/lists)
 - Set
@@ -76,7 +77,7 @@ The key is that finding the next window of _m_ characters can be calculated usin
 ![String Hash j plus one][str_hash_plus_one]
 
 
-### Binary Heap
+### Heap
 
 Maintains a partial order on the set of elements which is weaker than the sorted order (efficient to maintain), yet stronger than random order(easier to find min).
 
@@ -91,6 +92,11 @@ Heap construction time can be increased to linear by using _bubble down_ inserti
 ![Heap Bubble Down][heap_bubble_d]
 
 **A Heap is not a Binary Tree**
+
+### Sort
+- Heap Sort
+- Merge Sort
+- Quick Sort
 
 [//]: # (Below are Markdown References)
 
