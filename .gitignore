@@ -1,3 +1,4 @@
 *.swp
 *.dSYM
 a.out
+*.gch

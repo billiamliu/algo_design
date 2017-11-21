@@ -76,7 +76,6 @@ can be reduced down to **O(m+n)**.
 The key is that finding the next window of _m_ characters can be calculated using:
 ![String Hash j plus one][str_hash_plus_one]
 
-
 ### Heap
 
 Maintains a partial order on the set of elements which is weaker than the sorted order (efficient to maintain), yet stronger than random order(easier to find min).
@@ -97,6 +96,23 @@ Heap construction time can be increased to linear by using _bubble down_ inserti
 - Heap Sort ![n log n][n_lg_n]
 - Merge Sort ![n log n][n_lg_n]
 - Quick Sort (worst case n^2, _random_ case ![n log n][n_lg_n] with high probability)
+
+### Graphs
+- undirected / directed
+- unweighted / weighted
+- simple / non-simple (loop, dupe edge)
+- sparse / dense
+- cyclic / acyclic
+- embedded / topological
+- explicit / implicit
+- unlabelled / labelled
+
+### Graph Data Structures
+**Adjacency Matrix**, rapid membership lookup, may use excessive space.
+
+**Adjacency List**, linked list, slower lookup, less space.
+
+
 
 [//]: # (Below are Markdown References)
 
