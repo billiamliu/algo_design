@@ -6,8 +6,7 @@ struct link {
   struct link *next;
 };
 
-struct link *
-addLink(struct link **l, char c)
+void addLink(struct link **l, char c)
 {
   struct link *p, *temp;
 
@@ -23,8 +22,6 @@ addLink(struct link **l, char c)
       temp = temp->next;
     temp->next = p;
   }
-
-  return p;
 }
 
 void showList(struct link *l)
