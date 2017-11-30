@@ -112,7 +112,23 @@ Heap construction time can be increased to linear by using _bubble down_ inserti
 
 **Adjacency List**, linked list, slower lookup, less space.
 
+DFS | BFS
+--- | ---
+Stack | Queue
 
+- BFS: good for finding shortest path to a vertex (unweighted graph), or test graph validity such as bipartite graphs
+- DFS: can use recursion rather than an explicit stack, has backtracking, easily find cycles from tree edges and back edges
+
+- [Topological Sorting](https://en.wikipedia.org/wiki/Topological_sorting), DFS on Directed Acyclic Graph (DAG) for scheduling sequence of tasks with dependencies
+- [Strongly Connected Components](https://en.wikipedia.org/wiki/Strongly_connected_component), DFS on directed graphs to find pockets of vertices that can reach each other
+
+**Minimum Spanning Tree**, shortest cost to connect all vertices (roads, telephone wires, etc).
+- [Prim's Algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm), from an arbitrary vertex, find cheapest neighbour.
+- [Kruskal's Algorithm](https://en.wikipedia.org/wiki/Kruskal's_algorithm), find cheapest edges as long as they don't form a cycle.
+
+### Weighted Graphs
+
+### Combinatorial Search & Heuristic Methods
 
 [//]: # (Below are Markdown References)
 
